@@ -9,7 +9,7 @@ public class Interpreter extends Operaciones {
     private Contexto contexto;
 
     public Interpreter(String msgToInterpreter) {
-        contexto = new Contexto(msgToInterpreter, replace(" ", ""));
+        contexto = new Contexto(msgToInterpreter.replace(" ", ""));
         for (String charOriginal : msgToInterpreter.split(" ")) {
             switch (charOriginal) {
                 case "+":
@@ -31,10 +31,10 @@ public class Interpreter extends Operaciones {
         for (Operaciones expression : gramatica) {
             expression.interpreter(contexto);
         }
-        return contexto.outpout;
+        return contexto.output;
     }
     @Override
-    public void Interpreter(Contexto contexto){
+    public void interpreter(Contexto contexto) {
 
     }
 }

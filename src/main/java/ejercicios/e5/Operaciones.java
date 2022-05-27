@@ -1,4 +1,6 @@
 package ejercicios.e5;
 
-public class Operaciones {
+public abstract class Operaciones {
+    public int digit;
+    public abstract void interpreter(Contexto contexto);
 }
